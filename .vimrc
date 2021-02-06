@@ -1,8 +1,8 @@
 syntax on
 set number
 set relativenumber
-set cursorline
-set cursorcolumn
+"set cursorline
+"set cursorcolumn
 set autoindent
 set smartindent
 set incsearch
@@ -40,17 +40,26 @@ inoremap <Down> <Nop>
 inoremap <Left> <Nop>
 inoremap <Right> <Nop>
 
+"-----tmux colour fix-----
+if &term =~ '256color'
+  " disable Background Color Erase (BCE) so that color schemes
+  " render properly when inside 256-color tmux and GNU screen.
+  " see also http://snk.tuxfamily.org/log/vim-256color-bce.html
+  set t_ut=
+endif
+
 "----Plug Plugin Manager----
 call plug#begin('~/.vim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'morhetz/gruvbox'
+"Plug 'morhetz/gruvbox'
 Plug 'mattn/emmet-vim'
 Plug 'vimwiki/vimwiki'
 Plug 'preservim/nerdtree'
 Plug 'itchyny/lightline.vim'
 "Plug 'kjwon15/vim-transparent'
-"Plug 'dracula/vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
 call plug#end()
+colorscheme dracula
 
 "-----CoC configs-----
 " Use tab for trigger completion with characters ahead and navigate.
@@ -68,8 +77,8 @@ function! s:check_back_space() abort
 endfunction
 
 "-------Gruvbox colour config------
-autocmd vimenter * colorscheme gruvbox
-:set bg=dark
+"autocmd vimenter * colorscheme gruvbox
+":set bg=dark
 
 "------- emmet config -----
 let g:user_emmet_leader_key=','
@@ -83,6 +92,5 @@ let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown'
 
 "-----NerdTree configs-----
 map <C-n> :NERDTreeToggle<CR>
-
-"-----NerdTree configs-----
 set laststatus=2
+
