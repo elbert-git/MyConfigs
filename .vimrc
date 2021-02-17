@@ -7,9 +7,9 @@ set autoindent
 set smartindent
 set incsearch
 
-set softtabstop=4
-set shiftwidth=4
-set tabstop=4
+set softtabstop=2
+set shiftwidth=2
+set tabstop=2
 
 set linebreak
 set ruler
@@ -58,6 +58,8 @@ Plug 'preservim/nerdtree'
 Plug 'itchyny/lightline.vim'
 "Plug 'kjwon15/vim-transparent'
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'tpope/vim-surround'
+Plug 'jiangmiao/auto-pairs'
 call plug#end()
 colorscheme dracula
 
