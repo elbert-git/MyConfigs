@@ -1,12 +1,10 @@
 #!/bin/bash
 
 #copy vim config file and folders
-cp ./.vimrc ~/.vimrc
-cp ./.vim ~/.vim
+cp  ./.vimrc ~/.vimrc
 
-#copy emacs config file and folders
-cp  ./.emacs ~/.emacs
-cp ./.emacs.d ~/.emacs.d
+#copy doom emacs config file and folders
+cp -rf ./doom.d ~/.doom.d
 
 #copy tmux config file
 cp ./.tmux.conf ~/.tmux.conf

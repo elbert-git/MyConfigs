@@ -16,6 +16,8 @@ set ruler
 
 set listchars=tab:\|\ 
 set list
+ 
+set nowrap
 
 "---- key remaps-----
 "maps ii to escape insert mode
