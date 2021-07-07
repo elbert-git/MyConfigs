@@ -4,7 +4,9 @@
 cp ~/.vimrc ./.vimrc
 
 #copy doom emacs config file and folders to this directory
-cp -rf ~/.doom.d  ./.doom.d
+cp ~/.doom.d/config.el ./doomConfigs/config.el
+cp ~/.doom.d/init.el ./doomConfigs/init.el
+cp ~/.doom.d/packages.el ./doomConfigs/packages.el
 
 #copy tmux config file to this directory
 cp ~/.tmux.conf ./.tmux.conf
