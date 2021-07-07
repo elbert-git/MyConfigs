@@ -81,3 +81,6 @@
   (key-chord-define evil-insert-state-map "ii" 'evil-normal-state) ;; ii to escape insert
   (key-chord-define evil-normal-state-map "ss" 'save-buffer) ;; ss to save buffer in normal mode
   )
+
+;; org mode bullets
+(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))

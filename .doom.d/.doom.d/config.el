@@ -42,8 +42,7 @@
 ;; - `use-package!' for configuring packages
 ;; - `after!' for running code after a package has loaded
 ;; - `add-load-path!' for adding directories to the `load-path', relative to
-;;   this file. Emacs searches the `load-path' when you load packages with
-;;   `require' or `use-package'.
+;;   this file. Emacs searches the `load-path' when you load packages with ;;   `require' or `use-package'.
 ;; - `map!' for binding new keys
 ;;
 ;; To get information about any of these functions/macros, move the cursor over
@@ -53,6 +52,28 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
+; ---------- doom and emacs stuff -----------------
+; font size
+;(setq doom-font (font-spec  :size 18 :weight 'semi-light)
+;      doom-variable-pitch-font (font-spec :size 18)
+;      doom-unicode-font (font-spec :size 18)
+;     doom-big-font (font-spec :size 28))
+;(setq doom-font (font-spec :size 18 ))
+
+ ;dt font settings
+ (setq doom-font (font-spec :family "monospace" :size 18)
+      doom-variable-pitch-font (font-spec :family "monospace" :size 18)
+      doom-big-font (font-spec :family "monospace" :size 24))
+(after! doom-themes
+  (setq doom-themes-enable-bold t
+        doom-themes-enable-italic t))
+(custom-set-faces!
+  '(font-lock-comment-face :slant italic)
+  '(font-lock-keyword-face :slant italic))
+
+;defaut screen size
+(setq initial-frame-alist '((top . 100) (left . 100) (width . 80) (height . 25)))
+
 ; ---------- package stuff -----------------
 (use-package! key-chord
   :config
@@ -60,3 +81,6 @@
   (key-chord-define evil-insert-state-map "ii" 'evil-normal-state) ;; ii to escape insert
   (key-chord-define evil-normal-state-map "ss" 'save-buffer) ;; ss to save buffer in normal mode
   )
+
+;; org mode bullets
+(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
