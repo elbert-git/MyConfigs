@@ -13,5 +13,5 @@ cp ~/.tmux.conf ./.tmux.conf
 
 #git commit save
 git add .
-git commit -m $1
+git commit
 git push
