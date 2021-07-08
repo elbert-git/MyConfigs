@@ -29,11 +29,6 @@ imap ii <Esc>
 "below maps ss to save file
 nnoremap ss :update<cr>
 
-"completing brackets
-":inoremap ( ()<Esc>i
-":inoremap [ []<Esc>i
-":inoremap { {}<Esc>i
-
 "removes arrow controls
 noremap <Up> <Nop>
 noremap <Down> <Nop>
@@ -63,10 +58,10 @@ Plug 'preservim/nerdtree'
 Plug 'itchyny/lightline.vim'
 "Plug 'kjwon15/vim-transparent'
 "Plug 'dracula/vim', { 'as': 'dracula' }
+"Plug 'OmniSharp/omnisharp-vim'
 Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
 call plug#end()
-"colorscheme dracula
 
 "-----CoC configs-----
 " Use tab for trigger completion with characters ahead and navigate.
@@ -86,16 +81,23 @@ endfunction
 "-------Gruvbox colour config------
 autocmd vimenter * colorscheme gruvbox
 :set bg=dark
+ 
+
+"-------dracula colour config------
+"colorscheme dracula
+
 
 "------- emmet config -----
 let g:user_emmet_leader_key=','
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
 
+
 "------- vimwiki config -----
 set nocompatible
 filetype plugin on
 let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
+
 
 "-----NerdTree configs-----
 map <C-n> :NERDTreeToggle<CR>

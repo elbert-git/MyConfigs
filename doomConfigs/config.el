@@ -25,7 +25,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-one)
+(setq doom-theme 'wombat)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
@@ -52,7 +52,7 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-; ---------- doom and emacs stuff -----------------
+; ---------- UI stuff -----------------
 ; font size
 ;(setq doom-font (font-spec  :size 18 :weight 'semi-light)
 ;      doom-variable-pitch-font (font-spec :size 18)
@@ -70,6 +70,9 @@
 (custom-set-faces!
   '(font-lock-comment-face :slant italic)
   '(font-lock-keyword-face :slant italic))
+
+(global-hl-line-mode)
+(set-face-underline 'hl-line nil)
 
 ;defaut screen size
 (setq initial-frame-alist '((top . 100) (left . 100) (width . 80) (height . 25)))
