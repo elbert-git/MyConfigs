@@ -56,11 +56,10 @@ Plug 'mattn/emmet-vim'
 Plug 'vimwiki/vimwiki'
 Plug 'preservim/nerdtree'
 Plug 'itchyny/lightline.vim'
-"Plug 'kjwon15/vim-transparent'
-"Plug 'dracula/vim', { 'as': 'dracula' }
-"Plug 'OmniSharp/omnisharp-vim'
+Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-surround'
 call plug#end()
 
 "-----CoC configs-----
