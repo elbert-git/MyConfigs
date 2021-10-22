@@ -19,6 +19,9 @@ set list
  
 set nowrap
  
+"folding
+set foldmethod=indent
+
 "tmux setup 
 "set t_Co=256
 
@@ -30,15 +33,15 @@ imap ii <Esc>
 nnoremap ss :update<cr>
 
 "removes arrow controls
-noremap <Up> <Nop>
-noremap <Down> <Nop>
-noremap <Left> <Nop>
-noremap <Right> <Nop>
-
-inoremap <Up> <Nop>
-inoremap <Down> <Nop>
-inoremap <Left> <Nop>
-inoremap <Right> <Nop>
+"noremap <Up> <Nop>
+"noremap <Down> <Nop>
+"noremap <Left> <Nop>
+"noremap <Right> <Nop>
+"
+"inoremap <Up> <Nop>
+"inoremap <Down> <Nop>
+"inoremap <Left> <Nop>
+"inoremap <Right> <Nop>
 
 "-----tmux colour fix----- (deprecated)
 "if &term =~ '256color'
